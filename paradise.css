@@ -84,8 +84,8 @@ body::before {
 /* ==================== NAVIGATION ==================== */
 .menu {
     position: fixed;
-    top: 24px;
-    left: 42.55%;
+    top: 26%;
+    left: 30.1%;
     transform: translateX(-50%);
     max-width: 600px;
     border-radius: 20px;
@@ -284,7 +284,7 @@ body::before {
 /* ==================== BACKGROUND SWITCHER ==================== */
 .bg-switcher {
     position: fixed;
-    bottom: 32px;
+    bottom: 29.50%;
     left: 32px;
     display: flex;
     flex-direction: column;
