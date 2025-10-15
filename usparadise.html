@@ -1,11 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔯𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</title>
-  <link rel="stylesheet" href="paradise.css">
-
-  <link rel="icon" type="image/png" href="imgs/ayanami.jpg">
-  <!-- SEO Básico -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔯𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</title>
+    <link rel="stylesheet" href="paradise.css">
+    <link rel="icon" type="image/png" href="imgs/ayanami.jpg">
+    
+   <!-- SEO Básico -->
   <meta name="description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿">
 
   <!-- Open Graph (para Discord, WhatsApp, Telegram, etc.) -->
@@ -26,6 +28,9 @@
 </head>
 <body>
     <div class="all-content">
+        <!-- Botão para mostrar wallpaper -->
+        <button class="wallpaper-btn" id="wallpaperBtn">Fundo</button>
+        
         <nav class="menu">
             <ul class="menu-a">
                 <li><a href="#inválido">Twitch</a></li>
@@ -33,12 +38,12 @@
             </ul>
         </nav>
 
-        <div class="intro-tela" id="introScreen">STᖇᙓSSᙓᗪ'S ᙎOᖇᒪᗪ🥀</div>
+        <div class="intro-tela" id="introScreen">ᔑtɾᥱ⳽⳽ᥱᑯ'⳽ ᙎoɾꙆᑯ🥀</div>
 
         <div class="main-content">
             <div class="container">
                 <div class="intro-container">
-                    <h2 class="intro-titulo">Bem vindos à STᖇᙓSSᙓᗪ'S ᙎOᖇᒪᗪ🥀</h2>
+                    <h2 class="intro-titulo">Bem vindos à ᔑtɾᥱ⳽⳽ᥱᑯ'⳽ ᙎoɾꙆᑯ🥀</h2>
                 </div>
 
                 <div class="discord-widget">
@@ -60,13 +65,52 @@
         </div>
 
         <!-- Background Switcher -->
-         <div class="bg-switcher">
-            <div class="bg-tab active" data-bg="imgBCK/Asuka.png"></div>
-            <div class="bg-tab" data-bg="imgBCK/japanese festival.jpeg"></div>
-            <div class="bg-tab" data-bg="imgBCK/Sono Bisque Doll landscape.png"></div>
+        <div class="bg-switcher">
+            <div class="bg-tab active" data-bg="imgBCK/The end of Evangelion.jpg"></div>
+            <div class="bg-tab" data-bg="imgBCK/Marin (festival).jpeg"></div>
+            <div class="bg-tab" data-bg="imgBCK/Gabimaru.jpg"></div>
         </div>
-    </div>  
+
+        <!-- Music Player -->
+        <div class="music-player">
+            <div class="player-header">
+                <img src="https://i.imgur.com/placeholder.jpg" alt="Album Art" class="album-art" id="albumArt">
+                <div class="song-info">
+                    <h3 class="song-title" id="songTitle">Título da Música</h3>
+                    <p class="song-artist" id="songArtist">Artista</p>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <button class="control-btn" id="prevBtn">⏮</button>
+                <button class="control-btn play-pause" id="playPauseBtn">▶</button>
+                <button class="control-btn" id="nextBtn">⏭</button>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="time-info">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="volume-container">
+                <span class="volume-icon" id="volumeIcon">🔊</span>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+            </div>
+
+            <!-- Audio Element (escondido) -->
+            <audio id="audioPlayer" preload="metadata">
+                <!-- AQUI VOCÊ COLOCA A MÚSICA -->
+                <source src="music/sua-musica.mp3" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+        </div>
+    </div>
     
-<script src="prd.js"></script>
+    <script src="prd.js"></script>
 </body>
 </html>
