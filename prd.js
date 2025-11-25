@@ -21,9 +21,9 @@ const updateClock = () => {
     
     // Adiciona pulsação sutil a cada segundo
     if (seconds % 2 === 0) {
-        document.querySelector('.clock-container').style.transform = 'scale(1.02)';
+        document.querySelector('.clock-container').style.transform = 'translateY(-50%) scale(1.02)';
     } else {
-        document.querySelector('.clock-container').style.transform = 'scale(1)';
+        document.querySelector('.clock-container').style.transform = 'translateY(-50%) scale(1)';
     }
 };
 
@@ -108,7 +108,7 @@ const createParticles = () => {
     particlesContainer.classList.add('particles-container');
     document.body.appendChild(particlesContainer);
     
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 20; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
         particle.style.left = `${Math.random() * 100}%`;
@@ -298,22 +298,28 @@ const volumeIcon = document.getElementById('volumeIcon');
 const albumArt = document.getElementById('albumArt');
 const songTitle = document.getElementById('songTitle');
 const songArtist = document.getElementById('songArtist');
+const musicPlayer = document.querySelector('.music-player');
+const musicToggle = document.getElementById('musicToggle');
+
+// Toggle Music Player
+musicToggle.addEventListener('click', () => {
+    musicPlayer.classList.toggle('open');
+});
 
 // Playlist - ADICIONE SUAS MÚSICAS AQUI!
 const playlist = [
     {
         title: "Promise - Album Bewitched",
         artist: "Laufey",
-        src: "music/Promise.mp3", // Música local
+        src: "music/Promise.mp3",
         cover: "music/Promise.png"
     },
     {
         title: "青い、濃い、橙色の日",
         artist: "MASS OF THE FERMENTING DREGS",
-        src: "music/青い、濃い、橙色の日.mp3", // Música online
+        src: "music/青い、濃い、橙色の日.mp3",
         cover: "music/AOI KOI DAIDARO.jpg"
     }
-    // Adicione mais músicas aqui seguindo o mesmo padrão!
 ];
 
 let currentSongIndex = 0;
@@ -419,7 +425,7 @@ audioPlayer.addEventListener('ended', () => {
 
 // Carregar primeira música
 loadSong(currentSongIndex);
-audioPlayer.volume = 0.4; // Volume inicial 70%
+audioPlayer.volume = 0.4;
 
 // ==================== MENSAGEM DE BOAS-VINDAS ====================
 console.log('%c🥀 Bem-vindo ao STRESSED\'S WORLD 🥀', 'color: #af2abc; font-size: 20px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);');
