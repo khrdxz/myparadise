@@ -24,13 +24,14 @@
   <meta name="twitter:description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/khrdxz/myparadise/main/imgs/asukaSEA.jpeg">
   <meta name="twitter:url" content="https://khrdxz.github.io/">
-  <meta name="twitter:creator" content="@teuUserAqui"> <!-- opcional -->
+  <meta name="twitter:creator" content="@teuUserAqui">
 </head>
 <body>
     <div class="all-content">
         <!-- Botão para mostrar wallpaper -->
         <button class="wallpaper-btn" id="wallpaperBtn">Fundo</button>
         
+        <!-- Menu Lateral Direito -->
         <nav class="menu">
             <ul class="menu-a">
                 <li><a href="#inválido">Twitch</a></li>
@@ -38,8 +39,15 @@
             </ul>
         </nav>
 
+        <!-- Relógio Lateral Esquerdo -->
+        <div class="clock-container">
+            <span id="hours">00</span>h <span id="minutes">00</span>m
+        </div>
+
+        <!-- Tela de Introdução -->
         <div class="intro-tela" id="introScreen">ᔑtɾᥱ⳽⳽ᥱᑯ'⳽ ᙎoɾꙆᑯ🥀</div>
 
+        <!-- Conteúdo Principal -->
         <div class="main-content">
             <div class="container">
                 <div class="intro-container">
@@ -58,21 +66,20 @@
                     </iframe>
                 </div>
             </div>
-            
-            <div class="clock-container">
-                <span id="hours">00</span>h : <span id="minutes">00</span>m
-            </div>
         </div>
 
-        <!-- Background Switcher -->
+        <!-- Background Switcher (Embaixo Central) -->
         <div class="bg-switcher">
-            <div class="bg-tab active" data-bg="imgBCK/The end of Evangelion.jpg"></div>
+            <div class="bg-tab active" data-bg="imgBCK/Kobeni.png"></div>
             <div class="bg-tab" data-bg="imgBCK/Marin (festival).jpeg"></div>
             <div class="bg-tab" data-bg="imgBCK/Gabimaru.jpg"></div>
         </div>
 
-        <!-- Music Player -->
+        <!-- Music Player (Lateral Direita Escondido) -->
         <div class="music-player">
+            <!-- Botão de Toggle -->
+            <button class="music-toggle" id="musicToggle"></button>
+
             <div class="player-header">
                 <img src="https://i.imgur.com/placeholder.jpg" alt="Album Art" class="album-art" id="albumArt">
                 <div class="song-info">
@@ -92,11 +99,9 @@
                     <div class="progress-fill" id="progressFill"></div>
                 </div>
                 <div class="time-info">
-                    <span id="currentTime">0:00</span>
-                    <span id="duration">0:00</span>
+                    <span id="hours">0:00</span> <span id="minutes">0:00</span>
                 </div>
             </div>
-
             <div class="volume-container">
                 <span class="volume-icon" id="volumeIcon">🔊</span>
                 <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
@@ -104,7 +109,6 @@
 
             <!-- Audio Element (escondido) -->
             <audio id="audioPlayer" preload="metadata">
-                <!-- AQUI VOCÊ COLOCA A MÚSICA -->
                 <source src="music/sua-musica.mp3" type="audio/mpeg">
                 Seu navegador não suporta áudio.
             </audio>
