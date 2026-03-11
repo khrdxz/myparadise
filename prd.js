@@ -178,3 +178,29 @@
 
     console.log('%c🥀 Stressed\'s Paradise', 'color:#c9405a;font-size:18px;font-weight:bold');
     console.log('%c↑ ↑ ↓ ↓ ← → ← → — Konami Code ativado?', 'color:#b8860b;font-size:12px');
+    
+    
+    // Hamburger menu
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu() {
+            hamburgerBtn.classList.toggle('open');
+            mobileNavOverlay.classList.toggle('open');
+            document.body.style.overflow = mobileNavOverlay.classList.contains('open') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            hamburgerBtn.classList.remove('open');
+            mobileNavOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        if (hamburgerBtn) {
+            hamburgerBtn.addEventListener('click', toggleMobileMenu);
+        }
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
