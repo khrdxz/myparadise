@@ -3,118 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔯𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀</title>
+    <title>𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔯𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢 🥀</title>
     <link rel="stylesheet" href="paradise.css">
-    <link rel="icon" type="image/png" href="imgs/ayanami.jpg">
     
-   <!-- SEO Básico -->
-  <meta name="description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿">
+    <link rel="icon" type="image/png" href="imgs/ayanami.jpg">
+    <meta name="description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿">
+    <meta property="og:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔯𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀">
+    <meta property="og:description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿">
+    <meta property="og:image" content="https://raw.githubusercontent.com/khrdxz/myparadise/main/imgs/Yui.jpeg">
+    <meta property="og:url" content="https://khrdxz.github.io/">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 
-  <!-- Open Graph (para Discord, WhatsApp, Telegram, etc.) -->
-  <meta property="og:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔯𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀">
-  <meta property="og:description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿">
-  <meta property="og:image" content="https://raw.githubusercontent.com/khrdxz/myparadise/main/imgs/Yui.jpeg">
-  <meta property="og:url" content="https://khrdxz.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Stressed's Paradise">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="𝔖𝔱𝔯𝔢𝔰𝔰𝔢𝔯𝔰 𝔓𝔞𝔯𝔞𝔡𝔦𝔰𝔢🥀">
-  <meta name="twitter:description" content="Junte-se ao nosso paraíso no Discord e curta uma experiência única! 🌿">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/khrdxz/myparadise/main/imgs/asukaSEA.jpeg">
-  <meta name="twitter:url" content="https://khrdxz.github.io/">
-  <meta name="twitter:creator" content="@teuUserAqui">
 </head>
 <body>
-    <div class="all-content">
-        <!-- Botão para mostrar wallpaper -->
-        <button class="wallpaper-btn" id="wallpaperBtn">Fundo</button>
-        
-        <!-- Menu Lateral Direito -->
-        <nav class="menu">
-            <ul class="menu-a">
-                <li><a href="#inválido">Twitch</a></li>
-                <li><a href="https://discord.gg/2YWyTU2k">Discord</a></li>
-            </ul>
-        </nav>
 
-        <!-- Relógio Lateral Esquerdo -->
-        <div class="clock-container">
-            <span id="hours">00</span>h <span id="minutes">00</span>m
-        </div>
+    <!-- Background -->
+    <div class="bg-layer" id="bgLayer">
+        <img src="imgBCK/Kobeni.png" alt="" id="bgImage">
+    </div>
 
-        <!-- Tela de Introdução -->
-        <div class="intro-tela" id="introScreen">ᔑtɾᥱ⳽⳽ᥱᑯ'⳽ ᙎoɾꙆᑯ🥀</div>
+    <!-- Noise -->
+    <div class="particles" id="particles"></div>
 
-        <!-- Conteúdo Principal -->
-        <div class="main-content">
-            <div class="container">
-                <div class="intro-container">
-                    <h2 class="intro-titulo">Bem vindos à ᔑtɾᥱ⳽⳽ᥱᑯ'⳽ ᙎoɾꙆᑯ🥀</h2>
-                </div>
+    <!-- Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-                <div class="discord-widget">
-                    <iframe 
-                        id="discord-base" 
-                        src="https://discord.com/widget?id=1318417511779405905&theme=dark" 
-                        width="350" 
-                        height="500" 
-                        allowtransparency="true" 
-                        frameborder="0" 
-                        sandbox="allow-popups allow-same-origin allow-scripts">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-
-        <!-- Background Switcher (Embaixo Central) -->
-        <div class="bg-switcher">
-            <div class="bg-tab active" data-bg="imgBCK/Kobeni.png"></div>
-            <div class="bg-tab" data-bg="imgBCK/Marin (festival).jpeg"></div>
-            <div class="bg-tab" data-bg="imgBCK/Gabimaru.jpg"></div>
-        </div>
-
-        <!-- Music Player (Lateral Direita Escondido) -->
-        <div class="music-player">
-            <!-- Botão de Toggle -->
-            <button class="music-toggle" id="musicToggle"></button>
-
-            <div class="player-header">
-                <img src="https://i.imgur.com/placeholder.jpg" alt="Album Art" class="album-art" id="albumArt">
-                <div class="song-info">
-                    <h3 class="song-title" id="songTitle">Título da Música</h3>
-                    <p class="song-artist" id="songArtist">Artista</p>
-                </div>
-            </div>
-
-            <div class="player-controls">
-                <button class="control-btn" id="prevBtn">⏮</button>
-                <button class="control-btn play-pause" id="playPauseBtn">▶</button>
-                <button class="control-btn" id="nextBtn">⏭</button>
-            </div>
-
-            <div class="progress-container">
-                <div class="progress-bar" id="progressBar">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-                <div class="time-info">
-                    <span id="hours">0:00</span> <span id="minutes">0:00</span>
-                </div>
-            </div>
-            <div class="volume-container">
-                <span class="volume-icon" id="volumeIcon">🔊</span>
-                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
-            </div>
-
-            <!-- Audio Element (escondido) -->
-            <audio id="audioPlayer" preload="metadata">
-                <source src="music/sua-musica.mp3" type="audio/mpeg">
-                Seu navegador não suporta áudio.
-            </audio>
+    <!-- Intro -->
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-glyph">ᔑtɾᥱ⳽⳽ᥱᑯ'⳽ ᙎoɾꙆᑯ 🥀</div>
+        <div class="intro-ornament">
+            <span></span>
+            <div class="rose">🥀</div>
+            <span></span>
         </div>
     </div>
-    
-    <script src="prd.js"></script>
+
+    <!-- Wallpaper Button -->
+    <button class="wallpaper-btn" id="wallpaperBtn">FUNDO</button>
+
+    <!-- Clock -->
+    <div class="clock" id="clock">
+        <span id="clockHours">00</span>
+        <div class="clock-divider"></div>
+        <span id="clockMins">00</span>
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+    <header id="header">
+        <a class="logo" href="#">
+            <div class="logo-mark">🥀</div>
+            <span>STRESSED'S PARADISE</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#comunidade">Comunidade</a></li>
+                <li><a href="#fundo">Fundos</a></li>
+                <li><a href="https://discord.gg/2YWyTU2k" class="nav-cta">Discord ↗</a></li>
+                <li><a href="#invalido">Twitch</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN ==================== -->
+    <main class="site-wrapper">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-eyebrow">bem-vindo ao paraíso</div>
+                <h1 class="hero-title">
+                    ᔑtɾᥱ⳽⳽ᥱᑯ'⳽<br><em>World</em> 🥀
+                </h1>
+                <p class="hero-subtitle">
+                    Um espaço onde a melancolia encontra a beleza.<br>
+                    Junte-se à nossa comunidade no Discord.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://discord.gg/2YWyTU2k" class="btn btn-primary">Entrar no Discord</a>
+                    <a href="#comunidade" class="btn btn-ghost">Explorar</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>DESCER</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- COMMUNITY -->
+        <section class="community" id="comunidade">
+            <div class="section-inner">
+                <div class="community-grid">
+                    <div class="community-text reveal">
+                        <span class="section-label">Nossa comunidade</span>
+                        <h2 class="section-title">Paraíso no<br><em style="color:var(--rose-light);font-style:italic">Discord</em></h2>
+                        <div class="section-divider">
+                            <div class="line"></div>
+                            <div class="ornament">🥀</div>
+                        </div>
+                        <p>Um lugar para quem aprecia o belo, o melancólico e o singular. Nossa comunidade é feita de pessoas que entendem que a arte está nos detalhes.</p>
+                        <p>Entre, apresente-se, e encontre seu lugar neste paraíso.</p>
+                        <a href="https://discord.gg/2YWyTU2k" class="btn btn-primary" style="margin-top:1rem">Entrar Agora</a>
+                        <div class="stat-row">
+                            <div class="stat">
+                                <span class="stat-number">∞</span>
+                                <span class="stat-label">Momentos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">🥀</span>
+                                <span class="stat-label">Comunidade</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">24h</span>
+                                <span class="stat-label">Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reveal reveal-delay-2">
+                        <div class="discord-frame-wrapper">
+                            <iframe
+                                src="https://discord.com/widget?id=1318417511779405905&theme=dark"
+                                width="100%"
+                                height="420"
+                                allowtransparency="true"
+                                frameborder="0"
+                                sandbox="allow-popups allow-same-origin allow-scripts">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BACKGROUNDS -->
+        <section id="fundo">
+            <div class="bg-switcher-wrap">
+                <span class="section-label reveal">Papéis de parede</span>
+                <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:0.5rem">Escolha o <em style="color:var(--rose-light);font-style:italic">Fundo</em></h2>
+                <div class="section-divider reveal reveal-delay-1">
+                    <div class="line"></div>
+                    <div class="ornament">🥀</div>
+                </div>
+                <div class="bg-grid">
+                    <div class="bg-card active reveal reveal-delay-1" data-bg="imgBCK/Kobeni.png">
+                        <img src="imgBCK/Kobeni.png" alt="Kobeni">
+                        <div class="bg-card-label">Kobeni</div>
+                    </div>
+                    <div class="bg-card reveal reveal-delay-2" data-bg="imgBCK/Marin (festival).jpeg">
+                        <img src="imgBCK/Marin (festival).jpeg" alt="Marin">
+                        <div class="bg-card-label">Marin — Festival</div>
+                    </div>
+                    <div class="bg-card reveal reveal-delay-3" data-bg="imgBCK/Gabimaru.jpg">
+                        <img src="imgBCK/Gabimaru.jpg" alt="Gabimaru">
+                        <div class="bg-card-label">Gabimaru</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a class="logo" href="#">
+                    <div class="logo-mark">🥀</div>
+                    <span>STRESSED'S PARADISE</span>
+                </a>
+                <p>Um paraíso construído com melancolía e arte.</p>
+            </div>
+            <div class="footer-ornament">🥀</div>
+            <div class="footer-links">
+                <a href="https://discord.gg/2YWyTU2k">Discord</a>
+                <a href="#invalido">Twitch</a>
+                <a href="#">Topo ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MUSIC PLAYER ==================== -->
+    <div class="player-float">
+        <button class="player-toggle" id="musicToggle" title="Player">♪</button>
+        <div class="player-panel" id="playerPanel">
+            <div class="player-inner">
+                <div class="player-album">
+                    <img src="music/Promise.png" alt="Cover" class="album-img" id="albumArt" onerror="this.src='https://i.imgur.com/YNcVuKu.png'">
+                    <div class="player-info">
+                        <h4 id="songTitle">Promise</h4>
+                        <p id="songArtist">Laufey</p>
+                    </div>
+                </div>
+                <div class="player-controls">
+                    <button class="ctrl-btn" id="prevBtn">⏮</button>
+                    <button class="ctrl-btn play" id="playPauseBtn">▶</button>
+                    <button class="ctrl-btn" id="nextBtn">⏭</button>
+                </div>
+                <div class="progress-wrap" id="progressBar">
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="time-row">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+                <div class="volume-row">
+                    <span class="vol-icon" id="volumeIcon">🔊</span>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="40">
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="audioPlayer" preload="metadata"></audio>
+
+    <script src="prd.js"></script>i
 </body>
 </html>
