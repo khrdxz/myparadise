@@ -39,7 +39,7 @@
 
     <!-- Intro -->
     <div class="intro-screen" id="introScreen">
-        <div class="intro-glyph">ᔑtɾᥱ⳽⳽ᥱᑯ'⳽ ᙎoɾꙆᑯ</div>
+        <div class="intro-glyph">ᔑtɾᥱ⳽⳽ᥱᑯ'⳽ ᙎoɾꙆᑯ </div>
         <div class="intro-ornament">
             <span></span>
             <div class="rose">🥀</div>
@@ -57,6 +57,17 @@
         <span id="clockMins">00</span>
     </div>
 
+    <!-- ==================== MOBILE NAV OVERLAY ==================== -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-ornament">🥀</div>
+        <ul>
+            <li><a href="#comunidade" class="mobile-nav-link">Comunidade</a></li>
+            <li><a href="#fundo" class="mobile-nav-link">Fundos</a></li>
+            <li><a href="https://discord.gg/2YWyTU2k" class="mobile-nav-link nav-cta">Discord ↗</a></li>
+            <li><a href="#invalido" class="mobile-nav-link">Twitch</a></li>
+        </ul>
+    </div>
+
     <!-- ==================== HEADER ==================== -->
     <header id="header">
         <a class="logo" href="#">
@@ -71,6 +82,11 @@
                 <li><a href="#invalido">Twitch</a></li>
             </ul>
         </nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <!-- ==================== MAIN ==================== -->
@@ -118,7 +134,7 @@
                                 <span class="stat-label">Momentos</span>
                             </div>
                             <div class="stat">
-                                <span class="stat-number">🥀</span>
+                                <span class="stat-number"><em style="color:var(--rose-light);font-style:italic">Online</em></span>
                                 <span class="stat-label">Comunidade</span>
                             </div>
                             <div class="stat">
@@ -225,7 +241,7 @@
     </div>
     <audio id="audioPlayer" preload="metadata"></audio>
 
-    <script src="prd.js"></script>i
+    <script src="prd.js"></script>
+
 </body>
 </html>
-
